@@ -1,5 +1,8 @@
 name: receive_dispatch.yml
-on: workflow_dispatch
+on:
+  repository_dispatch:
+    types: [sample_push]
+
 jobs:
   my-job:
     runs-on: ubuntu-latest
